@@ -13,6 +13,9 @@ id="{{$service['id']}}"
 href="{{route('Dettaglio',['id'=>$service['id']])}}"
 nameButton='Dettaglio'
 img="{{$service['img']}}"
+prezzo="{{null}}"
+tempo="{{null}}"
+
 />
 
   @endforeach
