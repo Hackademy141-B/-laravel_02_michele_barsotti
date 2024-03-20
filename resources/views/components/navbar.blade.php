@@ -8,6 +8,7 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{{route('ChiSiamo')}}">Chi siamo</a>
           <a class="nav-link" href="{{route('Servizi')}}">Servizi</a>
+          <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
          
           
         </div>

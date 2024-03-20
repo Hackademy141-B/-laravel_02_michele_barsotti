@@ -21,4 +21,5 @@ Route::get('/data-page', [FrontController::class, 'Servizi'])->name('Servizi');
 
 Route::get('/DetailPG/{id}', [FrontController::class, 'Dettaglio'])->name('Dettaglio');
 
-
+Route::get('/contact-us', [FrontController::class, 'contactUs'])->name('contactUs');
+Route::post('/send-mail', [FrontController::class, 'sendMail'])->name('sendMail');

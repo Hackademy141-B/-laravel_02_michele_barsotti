@@ -46,4 +46,11 @@ $services=[
 
         
     }
+
+    public function contactUs(){
+        return view('mail.contactView');
+    }
+    public function sendMail(Request $request){
+        
+    }
 }
