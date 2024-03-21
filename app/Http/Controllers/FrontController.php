@@ -47,10 +47,20 @@ $services=[
         
     }
 
-    public function contactUs(){
-        return view('mail.contactView');
-    }
-    public function sendMail(Request $request){
+    // funzioni email
+     public function contactUs(){
+         return view('mail.contactView');
+     }
+     public function sendMail(Request $request){
         
-    }
+     }
+
+    //  funzioni inserimento prodotti
+     public function product(){
+return view('productFolder.productCreate');
+     }
+      public function createPag(Request $request){
+        $product=Product::create(['nome'=>$request->nome,'prezzo'=>$request->prezzo,'descrizione'=>$request->descrizione]);
+      }
+
 }

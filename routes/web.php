@@ -21,5 +21,10 @@ Route::get('/data-page', [FrontController::class, 'Servizi'])->name('Servizi');
 
 Route::get('/DetailPG/{id}', [FrontController::class, 'Dettaglio'])->name('Dettaglio');
 
-Route::get('/contact-us', [FrontController::class, 'contactUs'])->name('contactUs');
-Route::post('/send-mail', [FrontController::class, 'sendMail'])->name('sendMail');
+// rotte email
+ Route::get('/contact-us', [FrontController::class, 'contactUs'])->name('contactUs');
+ Route::post('/send-mail', [FrontController::class, 'sendMail'])->name('sendMail');
+
+//  rotte prodotto
+ Route::get('/ProductPage',[FrontController::class, 'product'])->name('product');
+ Route::post('/ProductCreate', [FrontController::class, 'createPag'])->name('createPag');
