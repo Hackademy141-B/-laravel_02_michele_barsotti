@@ -9,7 +9,11 @@
                 </h1>
 
                 
+                
                 <form method="post" action="{{route('createPag')}}" class="p-3">
+                  
+                  @csrf
+
                   <div class="mb-3">
                     <label for="InputNameProduct" class="form-label">Nome del prodotto</label>
                     <input name="nome" type="text" class="form-control" id="InputNameProduct" aria-describedby="namelHelp">

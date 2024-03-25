@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,6 @@ Route::get('/DetailPG/{id}', [FrontController::class, 'Dettaglio'])->name('Detta
  Route::post('/send-mail', [FrontController::class, 'sendMail'])->name('sendMail');
 
 //  rotte prodotto
- Route::get('/ProductPage',[FrontController::class, 'product'])->name('product');
- Route::post('/ProductCreate', [FrontController::class, 'createPag'])->name('createPag');
+ Route::get('/ProductPage',[ProductController::class, 'product'])->name('product');
+ Route::post('/ProductCreate',[ProductController::class, 'createPag'])->name('createPag');
+Route::get('/productStore', [ProductController::class, 'store'])->name('store');

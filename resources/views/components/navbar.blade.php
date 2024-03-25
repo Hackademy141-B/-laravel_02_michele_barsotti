@@ -10,7 +10,7 @@
           <a class="nav-link" href="{{route('Servizi')}}">Servizi</a>
           <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
           <a class="nav-link" href="{{route('product')}}">Crea il tuo prodotto</a>
-         
+          <a class="nav-link" href="{{route('store')}}">Lista Prodotti</a>
           
         </div>
       </div>

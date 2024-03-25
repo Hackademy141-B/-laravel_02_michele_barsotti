@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -52,15 +53,12 @@ $services=[
          return view('mail.contactView');
      }
      public function sendMail(Request $request){
-        
+        $name=$request->input('nome');
+        $email=$request->input('email');
+        $text=$request->input('testo');
+        // dd($name,$email,$text);
      }
 
-    //  funzioni inserimento prodotti
-     public function product(){
-return view('productFolder.productCreate');
-     }
-      public function createPag(Request $request){
-        $product=Product::create(['nome'=>$request->nome,'prezzo'=>$request->prezzo,'descrizione'=>$request->descrizione]);
-      }
+    
 
 }
