@@ -8,7 +8,7 @@
                     Crea il tuo prodotto!
                 </h1>
 
-                @if ($errors->any())
+                {{-- @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -16,7 +16,7 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif --}}
                 
                 <form method="post" action="{{route('createPag')}}" class="p-3" enctype="multipart/form-data">
                   
