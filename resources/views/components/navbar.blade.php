@@ -13,18 +13,31 @@
           <a class="nav-link" href="{{route('store')}}">Lista Prodotti</a>
           <div class="dropdown">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
+              @auth
+              Salve, {{Auth::user()->name}}
+              @else
+              Accedi
+              @endauth
             </button>
             <ul class="dropdown-menu">
+              @guest
               <li><a class="nav-link" href="{{route('register')}}">Registrati</a></li>
               <li><a class="nav-link" href="{{route('login')}}">Accedi</a></li>
-              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form.logout').submit()";>Logout</a></li>
-              <form id="form-logout" method="post" action="{{route('logout')}}" class="d-none">@csrf</form>
+              @else
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit()";>Logout</a></li>
+              <li><form id="form-logout" method="post" action="{{route('logout')}}" class="d-none">@csrf</form></li>
+              @endguest
+
             </ul>
+           
+                
           </div>
         </div>
       </div>
     </div>
   </nav>
+                
+           
+                
               
               
