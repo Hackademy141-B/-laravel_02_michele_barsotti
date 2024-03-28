@@ -31,3 +31,4 @@ Route::get('/thankyouPage/{name}/{email}', [FrontController::class, 'thankyouPag
 Route::get('/ProductPage',[ProductController::class, 'product'])->name('product');
 Route::post('/ProductCreate',[ProductController::class, 'createPag'])->name('createPag');
 Route::get('/productStore', [ProductController::class, 'store'])->name('store');
+

@@ -11,8 +11,20 @@
           <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
           <a class="nav-link" href="{{route('product')}}">Crea il tuo prodotto</a>
           <a class="nav-link" href="{{route('store')}}">Lista Prodotti</a>
-          
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('register')}}">Registrati</a></li>
+              <li><a class="nav-link" href="{{route('login')}}">Accedi</a></li>
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form.logout').submit()";>Logout</a></li>
+              <form id="form-logout" method="post" action="{{route('logout')}}" class="d-none">@csrf</form>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </nav>
+              
+              
