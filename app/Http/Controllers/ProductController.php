@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
@@ -14,7 +15,11 @@ class ProductController extends Controller
   }
   
   public function createPag(ProductRequest $request){
-    $product=Product::create(['nome'=>$request->nome,'prezzo'=>$request->prezzo,'descrizione'=>$request->descrizione,'img'=>$request->file('img')?$request->file('img')->store('public/img') : null]);
+    $product=Product::create(['nome'=>$request->nome,
+    'prezzo'=>$request->prezzo,
+    'descrizione'=>$request->descrizione,
+    'img'=>$request->file('img')?$request->file('img')->store('public/img') : null,
+    'user_id'=>Auth::user()->id]);
     // dd($request->all());
     // $product=new Product();
     // $product->nome=$nome;

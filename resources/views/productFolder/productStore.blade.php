@@ -19,6 +19,12 @@
                             <h5 class="card-title">{{$product['nome']}}</h5>
                             <p class="card-text">{{$product['prezzo']}}</p>
                             <p class="card-text">{{$product['descrizione']}}</p>
+                            @if($product->user)
+                            <p class="card-text">Venditore: {{$product->user->name}}</p>
+                        @else
+                            <p class="card-text">Nessun utente definito!</p>
+                        @endif
+                    
                         </div>
                     </div>
                 </div>
