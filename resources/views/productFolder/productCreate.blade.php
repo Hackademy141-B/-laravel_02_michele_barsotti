@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="dynamicTitle">Contattaci</x-slot>
-    <x-navbar/>
+    
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 rounded-5 shadow mt-3">

@@ -1,6 +1,6 @@
 <x-layout>
 
-  <x-navbar/>
+  
 
   <x-card
   name="{{$service['name']}}"

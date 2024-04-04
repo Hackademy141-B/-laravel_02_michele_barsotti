@@ -1,5 +1,5 @@
 <x-layout>
-<x-navbar/>
+
 
   <div class="container">
 <div class="row d-flex justify-content-around bg-danger">

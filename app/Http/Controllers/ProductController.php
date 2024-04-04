@@ -9,6 +9,11 @@ use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
+
+  public function __construct()
+  {
+      $this->middleware('auth')->except('store');
+  }
   //  funzioni inserimento prodotti
   public function product(){
     return view('productFolder.productCreate');

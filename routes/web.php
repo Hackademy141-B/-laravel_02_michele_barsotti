@@ -1,6 +1,7 @@
 <?php
-use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -31,4 +32,9 @@ Route::get('/thankyouPage/{name}/{email}', [FrontController::class, 'thankyouPag
 Route::get('/ProductPage',[ProductController::class, 'product'])->name('product');
 Route::post('/ProductCreate',[ProductController::class, 'createPag'])->name('createPag');
 Route::get('/productStore', [ProductController::class, 'store'])->name('store');
+
+// rotte Negozio
+Route::get('/createStore/store', [StoreController::class, 'create'])->name('storeCreate');
+Route::post('/store/Store', [StoreController::class, 'store'])->name('storeStore');
+Route::get('/storeIndex/index', [StoreController::class, 'index'])->name('indexStore');
 

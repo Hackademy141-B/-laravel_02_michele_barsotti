@@ -11,6 +11,8 @@
           <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
           <a class="nav-link" href="{{route('product')}}">Crea il tuo prodotto</a>
           <a class="nav-link" href="{{route('store')}}">Lista Prodotti</a>
+          <a class="nav-link" href="{{route('indexStore')}}">Tutti i negozi</a>
+          <a class="nav-link" href="{{route('storeCreate')}}">Crea negozio</a>
           <div class="dropdown">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               @auth
